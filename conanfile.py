@@ -31,3 +31,5 @@ class NanoPbConan(ConanFile):
         self.cpp_info.includedirs = ["include"]
         self.cpp_info.libdirs = ["lib"]
         self.cpp_info.libs = ["protobuf-nanopb"]
+        self.env_info.PATH.append(path.join(self.package_folder, "bin"))
+        self.env_info.PYTHONPATH.append(path.join(self.package_folder, "lib/python3/dist-packages"))
